@@ -67,13 +67,13 @@
 
     <!-- Desarrollo -->
     <div class="container">
-        <h1 class="text-center my-5">Nuestros Productos</h1>
+        <h1 class="text-center my-5 stylotitulos">Nuestros Productos</h1>
 
         <!-- Filtro -->
         <div class="container d-flex justify-center">
             <input type="text" id="formulario" class="form-control w-50 my-2" placeholder="Alfaparf, Lo´real, Fidelite">
-            <button class="btn btn-info my-2 ms-3 btn-dark" id="boton">Buscar</button>
-            <button class="btn btn-info my-2 ms-1 btn-dark" id="refresh"><i class="fa-solid fa-arrows-rotate"></i></button>
+            <button class="btn btn-info my-2 ms-3 btn-dark botonstylo" id="boton ">Buscar</button>
+            <button class="btn btn-info my-2 ms-1 btn-dark botonstylo" id="refresh"><i class="fa-solid fa-arrows-rotate"></i></button>
         </div>
         <!-- Productos -->
         <div class="row productosorden cardssproducto" id="cards"></div>
@@ -107,7 +107,7 @@
                 <div class="card-body text-center">
                     <h5>Título</h5>
                     <p>$<span class="precio">precio</span></p>
-                    <button class="btn btn-dark  ">Agregar a carrito</button>
+                    <button class="btn btn-dark botonstylo ">Agregar a carrito</button>
                 </div>
             </div>
         </div>
@@ -119,8 +119,8 @@
             <td>Producto</td>
             <td>Cantidad</td>
             <td>
-                <button class="btn btn-info btn-sm">+</button>
-                <button class="btn btn-danger btn-sm">-</button>
+                <button class="btn btn-info btn-sm botonstylo">+</button>
+                <button class="btn btn-danger btn-sm botonstylo">-</button>
             </td>
             <td>$ <span class="precio">Precio</span></td>
         </tr>
@@ -130,13 +130,13 @@
         <th scope="row" colspan="2">Total de productos</th>
         <td>10</td>
         <td>
-            <button class="btn btn-danger btn-sm" id="vaciar-carrito">Vaciar</button>
+            <button class="btn btn-danger btn-sm botonstylo" id="vaciar-carrito">Vaciar</button>
         </td>
         <td class="font-weight-bold">$ <span class="precio">5000</span></td>
     </template>
 
     <template id="template-compra">
-        <button class="btn btn-success btn-lg me-5 mt-2 " id="comprar-carrito">Comprar</button>
+        <button class="btn btn-success btn-lg me-5 mt-2 botonstylo " id="comprar-carrito">Comprar</button>
     </template>
     
 
