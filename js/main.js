@@ -77,7 +77,7 @@ const pintarCards = data => {
 
 // Agregar al carrito:
 const addCarrito = e => {
-    if (e.target.classList.contains('bttn')) {
+    if (e.target.classList.contains('btn-dark')) {
         setCarrito(e.target.parentElement);
     }
  
@@ -86,7 +86,7 @@ const addCarrito = e => {
 
 const setCarrito = item => {
     const producto = {
-        id: item.querySelector('.bttn').dataset.id,
+        id: item.querySelector('.btn-dark').dataset.id,
         nombre: item.querySelector('h5').textContent,
         precio: item.querySelector('.precio').textContent,
         cantidad: 1,
@@ -100,7 +100,7 @@ const setCarrito = item => {
         ...producto
     }
 
-    const buttons = document.querySelectorAll('.button');
+    const buttons = document.querySelectorAll('.buttons');
     buttons.forEach(button => button.addEventListener('click', handleClick));
 }
 
