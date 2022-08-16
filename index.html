@@ -1,114 +1,124 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/style.css">
-    <title>HairDis</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Boostrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Proyecto Final - Agustín Páparo</title>
 </head>
+
 <body>
-  <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg bg-dark sticky-top">
-      <div class="container-fluid">
-          <a class="navbar-brand" href="#">Catálogo</a>
-          
-          <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
-              <ul class="navbar-nav d-flex">
-                  <li class="nav-item">
-                      <a class="nav-link" href="#tablaCarrito">
-                          <i class="fa-solid fa-cart-shopping"></i> <span id="cantidadProductos">(0)</span>
-                      </a>
-                  </li>
-              </ul>
-          </div>
-      </div>
-  </nav>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Catálogo</a>
+            
+            <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
+                <ul class="navbar-nav d-flex">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tablaCarrito">
+                            <i class="fa-solid fa-cart-shopping"></i> <span id="cantidadProductos">(0)</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
 
-  <!-- Desarrollo -->
-  <div class="container">
-      <h1 class="text-center my-5">Carrito de Compras</h1>
+    <!-- Desarrollo -->
+    <div class="container">
+        <h1 class="text-center my-5">Carrito de Compras</h1>
 
-      <!-- Filtro -->
-      <div class="container d-flex justify-center">
-          <input type="text" id="formulario" class="form-control w-50 my-2" placeholder="Lo'real, Alfaparf, Fidelite">
-          <button class="btn btn-info my-2 ms-3" id="boton">Buscar</button>
-          <button class="btn btn-info my-2 ms-1" id="refresh"><i class="fa-solid fa-arrows-rotate"></i></button>
-      </div>
-      <!-- Productos -->
-      <div class="row" id="cards"></div>
-      <table class="table mb-0 mt-5" id="tablaCarrito">
-          <thead>
-              <tr>
-                  <th scope="col">id</th>
-                  <th scope="col">Producto</th>
-                  <th scope="col">Cantidad</th>
-                  <th scope="col">+/-</th>
-                  <th scope="col">Total</th>
-              </tr>
-          </thead>
-          <tbody id="items"></tbody>
-          <tfoot>
-              <tr id="footer">
-                  <th scope="row" colspan="5">Carrito vacío - comience a comprar!</th>
-              </tr>
-          </tfoot>
-      </table>
-      <div class="col-12 text-end mt-0 mb-5" id="comprar"></div>
-  </div>
+        <!-- Filtro -->
+        <div class="container d-flex justify-center">
+            <input type="text" id="formulario" class="form-control w-50 my-2" placeholder="Abrigos, Accesorios, Calzados, Camisas, Pantalones o Remeras">
+            <button class="btn btn-info my-2 ms-3" id="boton">Buscar</button>
+            <button class="btn btn-info my-2 ms-1" id="refresh"><i class="fa-solid fa-arrows-rotate"></i></button>
+        </div>
+        <!-- Productos -->
+        <div class="row" id="cards"></div>
+        <table class="table mb-0 mt-5" id="tablaCarrito">
+            <thead>
+                <tr>
+                    <th scope="col">id</th>
+                    <th scope="col">Producto</th>
+                    <th scope="col">Cantidad</th>
+                    <th scope="col">+/-</th>
+                    <th scope="col">Total</th>
+                </tr>
+            </thead>
+            <tbody id="items"></tbody>
+            <tfoot>
+                <tr id="footer">
+                    <th scope="row" colspan="5">Carrito vacío - comience a comprar!</th>
+                </tr>
+            </tfoot>
+        </table>
+        <div class="col-12 text-end mt-0 mb-5" id="comprar"></div>
+    </div>
 
 
 
-  <!-- TAMPLATES -->
-  <template id="template-card">
-      <div class="col-md-4 mb-2">
-          <div class="card text-center">
-              <img src="" alt="" class=" mx-auto w-75 ">
-              <div class="card-body text-center">
-                  <h5>Título</h5>
-                  <p>$<span class="precio">precio</span></p>
-                  <button class="btn btn-dark">Agregar a carrito</button>
-              </div>
-          </div>
-      </div>
-  </template>
+    <!-- TAMPLATES -->
+    <template id="template-card">
+        <div class="col-md-4 mb-2">
+            <div class="card text-center">
+                <img src="" alt="" class=" mx-auto w-75 ">
+                <div class="card-body text-center">
+                    <h5>Título</h5>
+                    <p>$<span class="precio">precio</span></p>
+                    <button class="btn btn-dark">Agregar a carrito</button>
+                </div>
+            </div>
+        </div>
+    </template>
 
-  <template id="template-carrito">
-      <tr>
-          <th scope="row">id</th>
-          <td>Producto</td>
-          <td>Cantidad</td>
-          <td>
-              <button class="btn btn-info btn-sm">+</button>
-              <button class="btn btn-danger btn-sm">-</button>
-          </td>
-          <td>$ <span class="precio">Precio</span></td>
-      </tr>
-  </template>
+    <template id="template-carrito">
+        <tr>
+            <th scope="row">id</th>
+            <td>Producto</td>
+            <td>Cantidad</td>
+            <td>
+                <button class="btn btn-info btn-sm">+</button>
+                <button class="btn btn-danger btn-sm">-</button>
+            </td>
+            <td>$ <span class="precio">Precio</span></td>
+        </tr>
+    </template>
 
-  <template id="template-footer">
-      <th scope="row" colspan="2">Total de productos</th>
-      <td>10</td>
-      <td>
-          <button class="btn btn-danger btn-sm" id="vaciar-carrito">Vaciar</button>
-      </td>
-      <td class="font-weight-bold">$ <span class="precio">5000</span></td>
-  </template>
+    <template id="template-footer">
+        <th scope="row" colspan="2">Total de productos</th>
+        <td>10</td>
+        <td>
+            <button class="btn btn-danger btn-sm" id="vaciar-carrito">Vaciar</button>
+        </td>
+        <td class="font-weight-bold">$ <span class="precio">5000</span></td>
+    </template>
 
-  <template id="template-compra">
-      <button class="btn btn-success btn-lg me-5 mt-2 " id="comprar-carrito">Comprar</button>
-  </template>
-  
+    <template id="template-compra">
+        <button class="btn btn-success btn-lg me-5 mt-2 " id="comprar-carrito">Comprar</button>
+    </template>
+    
 
-  <!-- Cdn Bootsrtap 5 -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-      </script>
-  <!-- Cdn Sweet alert -->
-  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <!-- Conecto con el archivo js -->
-  <script src="js/index.js"></script>
+    <!-- Cdn Bootsrtap 5 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        </script>
+    <!-- Cdn Sweet alert -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Conecto con el archivo js -->
+    <script src="js/main.js"></script>
 </body>
+
 </html>
+
