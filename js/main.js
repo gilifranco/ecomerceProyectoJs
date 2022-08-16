@@ -100,21 +100,6 @@ const setCarrito = item => {
         ...producto
     }
 
-    const buttons = document.querySelectorAll('.buttons');
-    buttons.forEach(button => button.addEventListener('click', handleClick));
-}
-
-const handleClick = (event) => {
-    const id = parseInt(event.target.getAttribute('ref'));
-    const product = productos.find(producto => producto.id === id);
-    Swal.fire({
-      position: 'center',
-      icon: 'success',
-      title: 'Agregado al carrito',
-      showConfirmButton: false,
-      timer: 1500
-    });
-
     pintarCarrito();
 }
 
