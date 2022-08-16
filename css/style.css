@@ -5,13 +5,17 @@
 body{
     background-color: #FDFEFE  ;
 }
-.header {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    background-color: #D4EFDF;
-    color: black;
+
+.navbarstyle {
+  background-color: #8BC1B6;
+  color: black;
+  
 }
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;  }
 
 .bigicon {
     font-size: 35px;
