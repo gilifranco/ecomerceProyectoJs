@@ -77,16 +77,16 @@ const pintarCards = data => {
 
 // Agregar al carrito:
 const addCarrito = e => {
-    if (e.target.classList.contains('btn-dark')) {
+    if (e.target.classList.contains('bttn')) {
         setCarrito(e.target.parentElement);
     }
-
+ 
     e.stopPropagation()
 }
 
 const setCarrito = item => {
     const producto = {
-        id: item.querySelector('.btn-dark').dataset.id,
+        id: item.querySelector('.bttn').dataset.id,
         nombre: item.querySelector('h5').textContent,
         precio: item.querySelector('.precio').textContent,
         cantidad: 1,
