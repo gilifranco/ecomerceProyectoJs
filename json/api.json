@@ -1,0 +1,85 @@
+[{
+  "precio": 3000,
+  "id": 1,
+  "nombre": "Shampoo CLM 5 Litros",
+  "imagen": "/img/producto1.jpg",
+  "tipo": "Fidelite"
+},
+{
+  "precio": 2000,
+  "id": 2,
+  "nombre": "Shampoo 1l Secos y castigados",
+  "imagen": "/img/producto2.jpg",
+  "tipo": "Fidelite"
+},
+{
+  "precio": 3000,
+  "id": 3,
+  "nombre": "Shampoo 1l Color",
+  "imagen": "/img/producto3.jpg",
+  "tipo": "Fidelite"
+},
+{
+  "precio": 3000,
+  "id": 4,
+  "nombre": "Shampoo 1l Grasos",
+  "imagen": "/img/producto4.jpg",
+  "tipo": "Fidelite"
+},
+{
+  "precio": 3000,
+  "id": 5,
+  "nombre": "Shampoo 1l Normales",
+  "imagen": "/img/producto5.jpg",
+  "tipo": "Fidelite"
+},
+{
+  "precio": 2000,
+  "id": 6,
+  "nombre": "Shampoo 1l Keratina",
+  "imagen": "/img/producto6.jpg",
+  "tipo": "Abrigos"
+},
+{
+  "precio": 3500,
+  "id": 7,
+  "nombre": "Shampoo 1l Violeta",
+  "imagen": "/img/producto 8.jpg",
+  "tipo": "Fidelite"
+},
+{
+  "precio": 3500,
+  "id": 8,
+  "nombre": "Shampoo Acido 5 Litros",
+  "imagen": "/img/producto9.jpg",
+  "tipo": "Fidelite"
+},
+{
+  "precio": 4000,
+  "id": 9,
+  "nombre": "Shampoo 250ml Color",
+  "imagen": "/img/productoalfa16.jpg",
+  "tipo": "Alfaparf"
+},
+{
+  "precio": 3750,
+  "id": 10,
+  "nombre": "Shampoo 250ml Nutricion",
+  "imagen": "./img/remeramlarga.webp",
+  "tipo": "Alfaparf"
+},
+{
+  "precio": 12000,
+  "id": 11,
+  "nombre": "Shampoo 250ml Color",
+  "imagen": "/img/productoloreal10.jpg",
+  "tipo": "Loreal"
+},
+{
+  "precio": 9000,
+  "id": 12,
+  "nombre": "Shampoo 250ml Nutricion",
+  "imagen": "/img/productoloreal11.jpg",
+  "tipo": "Loreal"
+}
+]
